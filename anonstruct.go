@@ -26,7 +26,7 @@ var Analyzer = &analysis.Analyzer{
 var Registration = goyze.Registration{
 	Name:       "anonstruct",
 	Categories: []goyze.Category{"types", "structure"},
-	URL:        "https://docs.gomatic.dev/yze/go/anonstruct",
+	URL:        "https://docs.gomatic.dev/yze/anonstruct",
 	Analyzer:   Analyzer,
 }
 
