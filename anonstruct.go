@@ -34,8 +34,8 @@ var Registration = goyze.Registration{
 // run reports each anonymous struct type that has fields.
 func run(pass *analysis.Pass) (any, error) {
 	insp := pass.ResultOf[inspect.Analyzer].(*inspector.Inspector)
-	insp.WithStack([]ast.Node{(*ast.StructType)(nil)}, func(n ast.Node, push bool, stack []ast.Node) bool {
-		if push {
+	insp.WithStack([]ast.Node{(*ast.StructType)(nil)}, func(n ast.Node, isPush bool, stack []ast.Node) bool {
+		if isPush {
 			check(pass, n.(*ast.StructType), stack)
 		}
 		return true
